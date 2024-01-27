@@ -1,0 +1,125 @@
+.purple {
+  background-color: hsl(263, 55%, 52%);
+}
+
+.gray {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.black {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.txt-white {
+  color: white;
+}
+
+.txt-gray {
+  color: hsl(219, 29%, 14%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #edf2f8;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.cards {
+  padding-block: 32px;
+  width: 1120px;
+  display: grid;
+  gap: 24px;
+  grid-auto-columns: 1fr;
+  margin-inline: auto;
+  grid-template-areas:
+    "a a b e"
+    "c d d e";
+}
+
+.card {
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.flex {
+  display: flex;
+  gap: 16px;
+}
+
+img {
+  width: 28px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+p {
+  margin-top: 15px;
+}
+.status {
+  font-size: 11px;
+  opacity: 0.5;
+  margin-top: 0;
+}
+
+.card > p:first-of-type {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.card > p:last-of-type {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.card-1 {
+  grid-area: a;
+}
+
+.card-2 {
+  grid-area: b;
+}
+
+.card-3 {
+  grid-area: c;
+}
+
+.card-4 {
+  grid-area: d;
+}
+
+.card-5 {
+  grid-area: e;
+}
+
+@media screen and (max-width: 800px) {
+  .cards {
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+  }
+}
